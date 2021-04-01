@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
+const hotelRouter = require('./routes/hotelRoutes');
 const app = express();
 
 
@@ -25,6 +26,7 @@ app.use((req,res,next) =>{
 
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/hotels', hotelRouter);
 
 module.exports = app;
 
